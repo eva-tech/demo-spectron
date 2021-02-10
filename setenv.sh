@@ -1,0 +1,10 @@
+export PUREGEV_ROOT=/opt/pleora/ebus_sdk/Ubuntu-14.04-x86_64
+export GENICAM_ROOT=$PUREGEV_ROOT/lib/genicam
+export GENICAM_ROOT_V2_4=$GENICAM_ROOT
+export GENICAM_LIB_DIR=$GENICAM_ROOT/bin/Linux64_x64
+export GENICAM_LOG_CONFIG=$GENICAM_ROOT/log/config/DefaultLogging.properties
+export GENICAM_LOG_CONFIG_V2_4=$GENICAM_LOG_CONFIG
+export GENICAM_CACHE=$HOME/.config/Pleora/genicam_cache_v2_4
+export GENICAM_CACHE_V2_4=$GENICAM_CACHE
+export LD_LIBRARY_PATH=${PUREGEV_ROOT}/lib:${GENICAM_LIB_DIR}:${LD_LIBRARY_PATH}
+export PATH=${PUREGEV_ROOT}/bin:${PATH}
