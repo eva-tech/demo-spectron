@@ -1,4 +1,4 @@
-# take-thermal-image-genicam
+# demo-spectron
 
 ## Installation Dependencies
 ```bash
