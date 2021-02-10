@@ -359,6 +359,14 @@ void acquireImage(PvDevice* device, PvStream *stream, const std::string& out_pat
     device->StreamDisable();
 }
 
+void calibrateCamera(PvDevice* device, PvStream *stream) {
+    // How do we perform the camera calibration ?
+}
+
+void masterCalibrateCamera(PvDevice* device, PvStream *stream) {
+    // How do we perform the camera master calibration ?
+}
+
 int main(int argc, char *argv[])
 {
     auto *pvSystem = new PvSystem;
@@ -373,6 +381,12 @@ int main(int argc, char *argv[])
     device = connectToDevice(deviceInfo);
     stream = openStream(deviceInfo);
     configStream(device, stream);
+
+    // Calibrate camera
+    calibrateCamera(device, stream);
+
+    // Master Calibrate camera
+    masterCalibrateCamera(device, stream);
 
     // Acquire image
     createStreamBuffers(device, stream, buffers);
